@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appl-loads version="1.0">
+    <name>dybingest_pdsf</name>
+    <timestamp>2013-01-15T10:36:21.241-08:00</timestamp>
+    <application name="SPADE.pdsf">
+        <state>SUSPENDED</state>
+    </application>
+</appl-loads>

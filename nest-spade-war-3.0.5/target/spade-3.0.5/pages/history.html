@@ -1,0 +1,51 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SPADE History</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="../styles/history.css" />
+        <script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <script src="../scripts/bootstrap.js" type="text/javascript"></script>
+        <script src="../scripts/digest.js" type="text/javascript"></script>
+        <script src="../scripts/history.js" type="text/javascript"></script>
+        <script type="text/javascript">
+// Variable used to enable local file testing.
+var localTest = ("file:" == window.location.protocol);
+
+var query_defaults = {
+		'mode' : 'file',
+		'instance' : 'local',
+		'interval' : '31',
+		}
+
+$(document).ready(function() {
+	promptForHistory('Enter ' + parseQuery()['mode'] + ' whose history you want so see',parseQuery()['mode'], parseQuery()['initial_id']);
+});</script>
+        <div>
+            <form action="post">
+                <div style="margin: 0 auto;width:496px;">
+                    <input class="digest-request" id="history_request" name="search_term"
+                        tabindex="1" type="text" />
+                    <input style="position:relative;right:18px;top:8px;" alt="Find"
+                        id="search-button" src="../images/search.png" type="image" value="Find" />
+                </div>
+            </form>
+        </div>
+        <div id="history_panel" style="margin-top:10px;display:none;">
+            <table id="history_display" class="digest-display">
+                <thead>
+                    <tr>
+                        <th>History for <span class="history_mode">-</span> <span class="digest-subject">-</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="digest-not-available">Data not yet available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

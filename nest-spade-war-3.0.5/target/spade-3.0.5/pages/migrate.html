@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+// Associative array in which the URL's query parameters are stored.
+var query_map = null;
+
+// Function to fill query's associative array.
+function parseQuery() {
+	if (null != query_map) {
+		return query_map;
+	}
+	var query_string = window.location.search.substring(1,
+			window.location.search.length);
+	var queries = query_string.split("&");
+	query_map = new Array();
+	for (index in queries) {
+		var query_item = queries[index].split("=");
+		query_map[query_item[0]] = unescape(query_item[1]);
+	}
+	return query_map;
+}
+
+window.onload = function() {
+    if ('bl733' == parseQuery()['instance']) {
+        migrated = window.location.href.replace(/spade4/g, "spade3"); 
+    } else {
+        migrated = window.location.href.replace(/spade4/g, "spade2"); 
+    }
+    window.location.href = migrated;
+};</script>
+    </body>
+</html>

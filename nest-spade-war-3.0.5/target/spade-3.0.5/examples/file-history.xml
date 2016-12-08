@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<digests>
+    <digest>
+        <subject>Ticket #3984583 (daq.Neutrino.0037058.Physics.EH1-Merged.SFO-1._0002)</subject>
+        <issued>
+            <change>
+                <item>Archived File</item>
+                <time>2013-01-22T17:46:48.269-08:00</time>
+            </change>
+            <change>
+                <item>Placed in Warehouse</item>
+                <time>2013-01-22T17:46:17.862-08:00</time>
+            </change>
+            <change>
+                <item>Metadata File</item>
+                <time>2013-01-22T17:46:06.178-08:00</time>
+            </change>
+            <change>
+                <item>Binary File</item>
+                <time>2013-01-22T17:46:06.154-08:00</time>
+            </change>
+            <change>
+                <item>Wrapped File</item>
+                <time>2013-01-22T17:45:28.398-08:00</time>
+            </change>
+            <change>
+                <item>Compressed File</item>
+                <time>2013-01-22T17:45:10.298-08:00</time>
+            </change>
+            <change>
+                <item>Packaged File</item>
+                <time>2013-01-22T17:45:10.159-08:00</time>
+            </change>
+            <change>
+                <item>Ticketed</item>
+                <time>2013-01-22T17:45:00.028-08:00</time>
+            </change>
+        </issued>
+    </digest>
+    <digest>
+        <subject>Ticket #3984120 (daq.Neutrino.0037058.Physics.EH1-Merged.SFO-1._0002)</subject>
+        <issued>
+            <change>
+                <item>Compressed File</item>
+                <time>2013-01-22T17:45:10.298-08:00</time>
+            </change>
+            <change>
+                <item>Packaged File</item>
+                <time>2013-01-22T17:45:10.159-08:00</time>
+            </change>
+            <change>
+                <item>Ticketed</item>
+                <time>2013-01-22T17:45:00.028-08:00</time>
+            </change>
+        </issued>
+    </digest>
+</digests>

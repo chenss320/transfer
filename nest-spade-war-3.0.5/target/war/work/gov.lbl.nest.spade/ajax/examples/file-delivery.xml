@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<digest>
+    <subject>daq.Neutrino.0037058.Physics.EH1-Merged.SFO-1._0002</subject>
+    <issued>
+        <change>
+            <item>KUP at PDSF</item>
+            <time>2013-01-22T19:01:00-08:00</time>
+        </change>
+        <change>
+            <item>PDSF warehouse</item>
+            <time>2013-01-22T19:00:05-08:00</time>
+        </change>
+        <change>
+            <item>Closed by DAQ</item>
+            <time>2013-01-22T17:31:57-08:00</time>
+        </change>
+        <change>
+            <item>Opened by DAQ</item>
+            <time>2013-01-22T17:21:57-08:00</time>
+        </change>
+    </issued>
+    <pending>
+        <item>IHEP warehouse</item>
+        <item>HPSS at PDSF</item>
+    </pending>
+</digest>

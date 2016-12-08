@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appl-counts version="1.0">
+    <name>dybingest_pdsf</name>
+    <timestamp>2013-01-17T19:00:58.961-08:00</timestamp>
+    <application name="SPADE.pdsf">
+        <state>RUNNING</state>
+    </application>
+    <worker-counts>
+        <worker-count name="analyzer-inbound">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="archiver">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="archiver-spool">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="compressor-bypass">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="compressor-gzip">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="confirmer">
+            <total>1</total>
+            <executing>1</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="duplicator">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="examiner">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="expander-bypass-inbound">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="expander-bypass-restoration">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="expander-inbound">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="expander-restoration">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="fetcher">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="finisher">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="ihep">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="ihep-retry">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="placer-inbound">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="placer-local">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="placer-restoration">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="receiver">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="reconfirmer">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="reexaminer">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="restorer">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="unwrapper-inbound">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+        <worker-count name="unwrapper-restoration">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>1</suspended>
+        </worker-count>
+        <worker-count name="wrapper">
+            <total>0</total>
+            <executing>0</executing>
+            <pending>0</pending>
+            <suspended>0</suspended>
+        </worker-count>
+    </worker-counts>
+    <worker-totals>
+        <total>1</total>
+        <executing>1</executing>
+        <pending>3</pending>
+        <suspended>1</suspended>
+    </worker-totals>
+</appl-counts>

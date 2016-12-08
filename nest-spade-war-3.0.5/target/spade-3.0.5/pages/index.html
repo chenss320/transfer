@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SPADE Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/jquery.mobile-1.2.0.min.css" />
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.mobile-1.2.0.min.js"></script>
+<script src="../scripts/bootstrap.js" type="text/javascript"></script>
+</head>
+<body>
+	<script src="../scripts/bootstrap.js" type="text/javascript"></script>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>SPADE Application</h1>
+		</div>
+		<!-- /header -->
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true">
+				<li><div>
+						<span id="application-instance">Unknown</span><span
+							style="float: right; top: -8px; position: relative;"><select
+							name="application-running" data-mini="true" data-role="slider"
+							disabled="disabled">
+								<option value="off">Off</option>
+								<option value="on">On</option>
+						</select> </span>
+					</div></li>
+				<li><div>
+						Cache (Free/Min)<span id="disk-spade"
+							style="float: right; font-weight: normal;">?/?</span>
+					</div></li>
+				<li><a id="application-activities" href=""
+					data-transition="slide">Activities</a></li>
+			</ul>
+			<!-- chart -->
+			<div>
+				<table class="count_table" style="width: 100%;">
+					<tbody>
+						<tr>
+							<td><iframe id="application-counts" class="count_frame"
+									src="splash.html" style="width: 100%; height: 240px"></iframe>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- actions -->
+			<div data-role="collapsible" data-theme="b" data-content-theme="c">
+				<h2>Actions</h2>
+				<div data-role="controlgroup" id="spade-actions">
+					<button disabled="disabled" id="local_scan" type="button">Scan
+						For New Local Files</button>
+					<button disabled="disabled" id="inbound_scan" type="button">Scan
+						For New Inbound Files</button>
+					<button disabled="disabled" id="send_confirmations" type="button">Send
+						Confirmations</button>
+					<button disabled="disabled" id="read_email" type="button">Scan
+						For New Email</button>
+				</div>
+			</div>
+			<!-- plots -->
+			<div data-role="collapsible" data-theme="b" data-content-theme="c">
+				<h2>Plots</h2>
+				<ul data-role="listview" data-inset="true">
+					<li><a id="application-hourly_placements" href=""
+						data-transition="slide">Placements for the last 24hr</a></li>
+					<li><a id="application-daily_placements" href=""
+						data-transition="slide">Complete placement history</a>
+					<li><a id="application-hourly_transfers" href=""
+						data-transition="slide">Transfers for the last 24hr</a></li>
+					<li><a id="application-daily_transfers" href=""
+						data-transition="slide">Complete transfer history</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /content -->
+	</div>
+	<!-- /page -->
+	<script type="text/javascript">
+		// Variable used to enable local file testing.
+		var localTest = ("file:" == window.location.protocol);
+
+		var query_defaults = {
+			'instance' : 'local',
+			'interval' : '31'
+		}
+
+		// Add a script element as a child of the body
+		function downloadJSAtOnload() {
+			var conjuntion;
+			if (null == window.location.search || '' == window.location.search) {
+				conjunction = '?';
+			} else {
+				conjunction = window.location.search + '&';
+			}
+			$('#application-activities').attr('href',
+					'activities.html' + window.location.search);
+			$('#application-counts').attr('src',
+					'counts.html' + conjunction + 'selection=totals');
+			$('#application-hourly_placements').attr('href',
+					'hourly_placements.html' + window.location.search);
+			$('#application-daily_placements').attr('href',
+					'daily_placements.html' + window.location.search);
+			$('#application-hourly_transfers').attr('href',
+					'hourly_transfers.html' + window.location.search);
+			$('#application-daily_transfers').attr('href',
+					'daily_transfers.html' + window.location.search);
+			scriptLoader.load([ '../scripts/application.js' ]);
+		}
+
+		$(document).on(
+				"pageinit",
+				"#hourly_placements_page",
+				function(event) {
+					var conjunction;
+					if (null == window.location.search
+							|| '' == window.location.search) {
+						conjunction = '?';
+					} else {
+						conjunction = window.location.search + '&';
+					}
+					$('#hourly_placements_plot').attr('src',
+							'chart.html' + conjunction + 'mode=hourly');
+				});
+
+		$(document).on(
+				"pageinit",
+				"#daily_placements_page",
+				function(event) {
+					$('#daily_placements_plot').attr('src',
+							'chart.html' + window.location.search);
+
+				});
+
+		$(document).on(
+				"pageinit",
+				"#hourly_transfers_page",
+				function(event) {
+					var conjunction;
+					if (null == window.location.search
+							|| '' == window.location.search) {
+						conjunction = '?';
+					} else {
+						conjunction = window.location.search + '&';
+					}
+					$('#hourly_transfers_plot').attr(
+							'src',
+							'chart.html' + conjunction
+									+ 'mode=hourly&quantity=transfers');
+				});
+
+		$(document).on(
+				"pageinit",
+				"#daily_transfers_page",
+				function downloadJSAtOnload() {
+					var conjunction;
+					if (null == window.location.search
+							|| '' == window.location.search) {
+						conjunction = '?';
+					} else {
+						conjunction = window.location.search + '&';
+					}
+					$('#daily_transfers_plot').attr('src',
+							'chart.html' + conjunction + 'quantity=transfers');
+				});
+
+		// Check for browser support of event handling capability
+		if (window.addEventListener) {
+			window.addEventListener("load", downloadJSAtOnload, false);
+		} else if (window.attachEvent) {
+			window.attachEvent("onload", downloadJSAtOnload);
+		} else {
+			window.onload = downloadJSAtOnload;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SPADE Activities</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</meta>
+<link rel="stylesheet" href="../css/jquery.mobile-1.2.0.min.css" />
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+	<script src="../scripts/bootstrap.js" type="text/javascript"></script>
+	<div data-role="page" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>SPADE Activities</h1>
+		</div>
+		<!-- /header -->
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" id="activity-states">
+				<li><div>
+						<span class="activity-name">Building list ...</span><span
+							style="float: right; top: -8px; position: relative;"><select
+							name="activity-loading" data-mini="true" data-role="slider"
+							disabled="disabled">
+								<option value="off">Off</option>
+								<option value="on">On</option>
+						</select> </span>
+					</div></li>
+			</ul>
+		</div>
+		<!-- /content -->
+	</div>
+	<!-- /page -->
+	<script type="text/javascript">
+		// Variable used to enable local file testing.
+		var localTest = ("file:" == window.location.protocol);
+		var updateInterval = null;
+
+		// Add a script element as a child of the body
+		function downloadJSAtOnload() {
+			var element = document.createElement("script");
+			element.src = "../scripts/application.js";
+			document.body.appendChild(element);
+		}
+
+		// Check for browser support of event handling capability
+		if (window.addEventListener) {
+			window.addEventListener("load", downloadJSAtOnload, false);
+		} else if (window.attachEvent) {
+			window.attachEvent("onload", downloadJSAtOnload);
+		} else {
+			window.onload = downloadJSAtOnload;
+		}
+	</script>
+</body>
+</html>

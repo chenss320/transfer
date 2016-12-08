@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appl-loads version="1.0">
+    <name>dybingest_pdsf</name>
+    <timestamp>2013-01-15T10:36:21.241-08:00</timestamp>
+    <application name="SPADE.pdsf">
+        <state>RUNNING</state>
+    </application>
+    <worker-loads>
+        <worker-load name="analyzer-inbound">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="archiver">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="archiver-spool">
+            <load max="1">0.0</load>
+            <suspended>true</suspended>
+        </worker-load>
+        <worker-load name="compressor-bypass">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="compressor-gzip">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="confirmer">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="duplicator">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="examiner">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="expander-bypass-inbound">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="expander-bypass-restoration">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="expander-inbound">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="expander-restoration">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="fetcher">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="finisher">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="ihep">
+            <load max="4">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="ihep-retry">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="placer-inbound">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="placer-local">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="placer-restoration">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="receiver">
+            <load max="1">0.0</load>
+            <suspended>true</suspended>
+        </worker-load>
+        <worker-load name="reconfirmer">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="reexaminer">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="restorer">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="unwrapper-inbound">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="unwrapper-restoration">
+            <load max="1">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+        <worker-load name="wrapper">
+            <load max="2">0.0</load>
+            <suspended>false</suspended>
+        </worker-load>
+    </worker-loads>
+    <worker-totals>
+        <load max="37">0.0</load>
+        <suspended>false</suspended>
+    </worker-totals>
+    <disk-load>
+        <free units="bytes">668819738624</free>
+        <minimum units="bytes">1073741824</minimum>
+    </disk-load>
+</appl-loads>

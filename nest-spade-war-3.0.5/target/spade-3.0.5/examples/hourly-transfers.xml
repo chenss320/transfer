@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<time-series>
+    <title>Transfers from SPADE.ihep</title>
+    <name>SPADE.ihep</name>
+    <email>dybingest_ihep@ihep.ac.cn</email>
+    <timestamp>2013-02-01T09:40:00+08:00</timestamp>
+    <timeslice>
+        <time-taken>2013-02-01T09:40:00+08:00</time-taken>
+        <bytes>2048860060</bytes>
+        <count>3</count>
+    </timeslice>
+    <timeslice>
+        <time-taken>2013-02-01T09:30:00+08:00</time-taken>
+        <bytes>1990516959</bytes>
+        <count>3</count>
+    </timeslice>
+    <timeslice>
+        <time-taken>2013-02-01T09:20:00+08:00</time-taken>
+        <bytes>675571493</bytes>
+        <count>1</count>
+    </timeslice>
+    <timeslice>
+        <time-taken>2013-02-01T09:10:00+08:00</time-taken>
+        <bytes>1653806145</bytes>
+        <count>4</count>
+    </timeslice>
+    <timeslice>
+        <time-taken>2013-02-01T09:00:00+08:00</time-taken>
+        <bytes>2118701062</bytes>
+        <count>4</count>
+    </timeslice>
+    <timeslice>
+        <time-taken>2013-02-01T08:50:00+08:00</time-taken>
+        <bytes>1346648610</bytes>
+        <count>2</count>
+    </timeslice>
+</time-series>

@@ -1,0 +1,113 @@
+/*
+ * Style for History pages to display Digests.
+ */
+
+.digest-display{
+    font-family:'Lucida Grande', Verdana, Geneva, sans-serif;
+    font-size:0.75em;
+    margin:0 auto;
+    border-collapse:collapse;
+    width:620px;
+}
+
+.digest-display tbody{
+    font-weight:bold;
+}
+
+.digest-display thead tr th{
+    background-color:#666666;
+    color:#ffffff;
+    padding:4px;
+    text-align:center;
+}
+
+.digest-existing-item1{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:center;
+}
+
+.digest-existing-item2{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:right;
+}
+
+.digest-existing-time{
+    background-color:#e3f9e2;
+    padding:6px 6px 6px 10px;
+}
+
+.digest-issued-item1{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:center;
+}
+
+.digest-issued-item2{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:right;
+}
+
+.digest-issued-time{
+    background-color:#e3f9e2;
+    padding:6px 6px 6px 10px;
+}
+
+.digest-pending-item1{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:center;
+}
+
+.digest-pending-item2{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:right;
+}
+
+.digest-pending-time{
+    background-color:#e3f9e2;
+    padding:6px 6px 6px 10px;
+}
+
+.digest-not-available{
+    background-color:#dddddd;
+    text-align:center;
+}
+
+.digest-request{
+    background-color:#eef6fb;
+    border-color:#92bbcc;
+    border-style:solid;
+    border-width:2px;
+    height:20px;
+    font-family:'Lucida Grande', Verdana, Geneva, sans-serif;
+    font-size:0.75em;
+    padding:3px 0px 2px 5px;
+    width:455px;
+}
+
+.digest-revoked-item1{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:center;
+}
+
+.digest-revoked-item1{
+    background-color:#deedf7;
+    padding:6px 15px 6px 6px;
+    text-align:right;
+}
+
+.digest-revoked-time{
+    background-color:#e3f9e2;
+    padding:6px 6px 6px 10px;
+}
+
+td{
+    border-color:#ffffff;
+    border-style:solid;
+    border-width:1px;
+}
