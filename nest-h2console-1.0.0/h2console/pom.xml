@@ -1,0 +1,93 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>gov.lbl.nest</groupId>
+    <artifactId>h2console</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+
+    <name>H2 Database console</name>
+    <url>http://nest.lbl.gov/h2console</url>
+
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>nest-maven3-projects</id>
+            <name>NEST Maven3 Repository</name>
+            <url>scp://nest.lbl.gov/home/nest/public_html/maven3/repository/</url>
+        </repository>
+        <site>
+            <id>nest-website</id>
+            <url>scp://nest.lbl.gov/home/nest/public_html/products/nest-h2console/h2console</url>
+        </site>
+    </distributionManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jboss-public-repository</id>
+            <name>JBoss Repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Define the version of JBoss' Java EE 6 APIs we want to import. Any 
+				dependencies from org.jboss.spec will have their version defined by this 
+				BOM -->
+            <!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill 
+				of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection) 
+				of artifacts. We use this here so that we always get the correct versions 
+				of artifacts. Here we use the jboss-javaee-web-6.0 stack (you can read this 
+				as the JBoss stack of the Java EE Web Profile 6 APIs), and we use version 
+				2.0.0.Beta1 which is the latest release of the stack. You can actually use 
+				this stack with any version of JBoss AS that implements Java EE 6, not just 
+				JBoss AS 7! -->
+            <dependency>
+                <groupId>org.jboss.spec</groupId>
+                <artifactId>jboss-javaee-web-6.0</artifactId>
+                <version>2.0.0.Final</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Dependencies>com.h2database.h2</Dependencies>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
